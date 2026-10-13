@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer base {
+  html { color-scheme: dark; }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #e2e8f0;
+    background: #0a0e17;
+    -webkit-font-smoothing: antialiased;
+  }
+  button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid #818cf8; outline-offset: 2px;
+  }
+}
+
+@keyframes fade-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.fade-in { animation: fade-in .25s ease-out both; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(148,163,184,.25); border-radius: 4px; }
+
+@media (prefers-reduced-motion: reduce) { .fade-in { animation: none; } * { scroll-behavior: auto !important; } }
